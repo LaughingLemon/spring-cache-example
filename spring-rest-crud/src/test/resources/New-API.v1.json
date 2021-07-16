@@ -1,0 +1,261 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "New API",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/inventoryItems": {
+      "get": {
+        "summary": "",
+        "operationId": "get-something",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/hal+json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "properties": {
+                    "_embedded": {
+                      "type": "object",
+                      "required": [
+                        "inventoryItems"
+                      ],
+                      "properties": {
+                        "inventoryItems": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 0,
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "name": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "_links": {
+                                "type": "object",
+                                "properties": {
+                                  "self": {
+                                    "type": "object",
+                                    "required": [
+                                      "href"
+                                    ],
+                                    "properties": {
+                                      "href": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    }
+                                  },
+                                  "inventoryItem": {
+                                    "type": "object",
+                                    "required": [
+                                      "href"
+                                    ],
+                                    "properties": {
+                                      "href": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    }
+                                  }
+                                },
+                                "required": [
+                                  "self",
+                                  "inventoryItem"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "name"
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    "_links": {
+                      "type": "object",
+                      "required": [
+                        "self",
+                        "profile"
+                      ],
+                      "properties": {
+                        "self": {
+                          "type": "object",
+                          "required": [
+                            "href"
+                          ],
+                          "properties": {
+                            "href": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          }
+                        },
+                        "profile": {
+                          "type": "object",
+                          "required": [
+                            "href"
+                          ],
+                          "properties": {
+                            "href": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "_embedded",
+                    "_links"
+                  ]
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "_embedded": {
+                        "inventoryItems": [
+                          {
+                            "name": "Declan Contreras",
+                            "_links": {
+                              "self": {
+                                "href": "http://localhost:8089/inventoryItems/1"
+                              },
+                              "inventoryItem": {
+                                "href": "http://localhost:8089/inventoryItems/1"
+                              }
+                            }
+                          },
+                          {
+                            "name": "Portia Beach",
+                            "_links": {
+                              "self": {
+                                "href": "http://localhost:8089/inventoryItems/2"
+                              },
+                              "inventoryItem": {
+                                "href": "http://localhost:8089/inventoryItems/2"
+                              }
+                            }
+                          },
+                          {
+                            "name": "Mathew Kelley",
+                            "_links": {
+                              "self": {
+                                "href": "http://localhost:8089/inventoryItems/3"
+                              },
+                              "inventoryItem": {
+                                "href": "http://localhost:8089/inventoryItems/3"
+                              }
+                            }
+                          },
+                          {
+                            "name": "Nicolle Bradley",
+                            "_links": {
+                              "self": {
+                                "href": "http://localhost:8089/inventoryItems/4"
+                              },
+                              "inventoryItem": {
+                                "href": "http://localhost:8089/inventoryItems/4"
+                              }
+                            }
+                          },
+                          {
+                            "name": "Janet Love",
+                            "_links": {
+                              "self": {
+                                "href": "http://localhost:8089/inventoryItems/5"
+                              },
+                              "inventoryItem": {
+                                "href": "http://localhost:8089/inventoryItems/5"
+                              }
+                            }
+                          },
+                          {
+                            "name": "Zidane Copeland",
+                            "_links": {
+                              "self": {
+                                "href": "http://localhost:8089/inventoryItems/6"
+                              },
+                              "inventoryItem": {
+                                "href": "http://localhost:8089/inventoryItems/6"
+                              }
+                            }
+                          },
+                          {
+                            "name": "Romana Arnold",
+                            "_links": {
+                              "self": {
+                                "href": "http://localhost:8089/inventoryItems/7"
+                              },
+                              "inventoryItem": {
+                                "href": "http://localhost:8089/inventoryItems/7"
+                              }
+                            }
+                          },
+                          {
+                            "name": "Farzana Hahn",
+                            "_links": {
+                              "self": {
+                                "href": "http://localhost:8089/inventoryItems/8"
+                              },
+                              "inventoryItem": {
+                                "href": "http://localhost:8089/inventoryItems/8"
+                              }
+                            }
+                          },
+                          {
+                            "name": "Anjali Rudd",
+                            "_links": {
+                              "self": {
+                                "href": "http://localhost:8089/inventoryItems/9"
+                              },
+                              "inventoryItem": {
+                                "href": "http://localhost:8089/inventoryItems/9"
+                              }
+                            }
+                          },
+                          {
+                            "name": "Solomon Cantrell",
+                            "_links": {
+                              "self": {
+                                "href": "http://localhost:8089/inventoryItems/10"
+                              },
+                              "inventoryItem": {
+                                "href": "http://localhost:8089/inventoryItems/10"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "_links": {
+                        "self": {
+                          "href": "http://localhost:8089/inventoryItems"
+                        },
+                        "profile": {
+                          "href": "http://localhost:8089/profile/inventoryItems"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}
